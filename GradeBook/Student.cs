@@ -45,5 +45,11 @@ namespace GradeBook
         {
             Grades.Remove(grade);
         }
+
+        public double GetAverage()
+        {
+            return Grades.Average();
+
+        }
     }
 }
