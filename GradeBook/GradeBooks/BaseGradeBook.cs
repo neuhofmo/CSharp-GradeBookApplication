@@ -137,8 +137,10 @@ namespace GradeBook.GradeBooks
 
         private double GetGPAPerType(double GPA, StudentType studentType)
         {
-            if (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled)
+            if (IsWeighted && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
+            {
                 return GPA + 1;
+            }
             else
             {
                 return GPA;
